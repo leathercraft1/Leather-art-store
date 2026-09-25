@@ -4,20 +4,162 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>حرفي الجلد</title>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f1eb;
+      margin: 0;
+      padding: 20px;
+      color: #2b211b;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      font-size: 38px;
+    }
+
+    .subtitle {
+      text-align: center;
+      font-size: 20px;
+    }
+
+    .product {
+      background: white;
+      padding: 20px;
+      margin-top: 30px;
+      border-radius: 15px;
+      box-shadow: 0 3px 12px rgba(0,0,0,0.12);
+    }
+
+    .product h2 {
+      margin-top: 0;
+    }
+
+    .price {
+      font-size: 22px;
+      font-weight: bold;
+      margin: 15px 0;
+    }
+
+    input {
+      width: 100%;
+      box-sizing: border-box;
+      padding: 13px;
+      margin: 7px 0;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 16px;
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 12px;
+      border: none;
+      border-radius: 8px;
+      font-size: 18px;
+      cursor: pointer;
+      background: #5b3926;
+      color: white;
+    }
+
+    #orderForm {
+      display: none;
+      margin-top: 20px;
+    }
+  </style>
 </head>
 
 <body>
 
+<div class="container">
+
   <h1>حرفي الجلد</h1>
-  <p>محافظ جلدية يدوية الصنع</p>
 
-  <h2>منتجاتنا</h2>
+  <p class="subtitle">
+    محافظ جلدية يدوية الصنع
+  </p>
 
-  <h3>محفظة جلدية يدوية</h3>
-  <p>محفظة مصنوعة من الجلد الطبيعي</p>
-  <p><strong>السعر: 2500 دج</strong></p>
+  <div class="product">
 
-  <button>اطلب الآن</button>
+    <h2>محفظة جلدية يدوية</h2>
+
+    <p>محفظة مصنوعة من الجلد الطبيعي بعناية وحرفية.</p>
+
+    <div class="price">السعر: 2500 دج</div>
+
+    <button onclick="showForm()">اطلب الآن</button>
+
+    <div id="orderForm">
+
+      <h2>معلومات الطلب</h2>
+
+      <input id="name" type="text" placeholder="الاسم واللقب">
+
+      <input id="phone" type="tel" placeholder="رقم الهاتف">
+
+      <input id="wilaya" type="text" placeholder="الولاية">
+
+      <input id="commune" type="text" placeholder="البلدية">
+
+      <input id="address" type="text" placeholder="العنوان">
+
+      <input id="quantity" type="number" value="1" min="1" placeholder="الكمية">
+
+      <button onclick="sendOrder()">
+        تأكيد الطلب عبر WhatsApp
+      </button>
+
+    </div>
+
+  </div>
+
+</div>
+
+<script>
+
+function showForm() {
+  document.getElementById("orderForm").style.display = "block";
+}
+
+function sendOrder() {
+
+  let name = document.getElementById("name").value;
+  let phone = document.getElementById("phone").value;
+  let wilaya = document.getElementById("wilaya").value;
+  let commune = document.getElementById("commune").value;
+  let address = document.getElementById("address").value;
+  let quantity = document.getElementById("quantity").value;
+
+  if (!name || !phone || !wilaya || !commune || !address) {
+    alert("يرجى ملء جميع المعلومات");
+    return;
+  }
+
+  let message =
+    "طلب جديد من متجر حرفي الجلد%0A%0A" +
+    "المنتج: محفظة جلدية يدوية%0A" +
+    "السعر: 2500 دج%0A" +
+    "الكمية: " + quantity + "%0A%0A" +
+    "الاسم واللقب: " + name + "%0A" +
+    "رقم الهاتف: " + phone + "%0A" +
+    "الولاية: " + wilaya + "%0A" +
+    "البلدية: " + commune + "%0A" +
+    "العنوان: " + address;
+
+  window.open(
+    "https://wa.me/213696250108?text=" + message,
+    "_blank"
+  );
+}
+
+</script>
 
 </body>
 </html>
