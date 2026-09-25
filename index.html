@@ -1,131 +1,193 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>حرفي الجلد | محافظ جلدية يدوية</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+<title>حرفي الجلد | محافظ جلدية يدوية</title>
 
-    body {
-      margin: 0;
-      font-family: Arial, Tahoma, sans-serif;
-      background: #f5f1e8;
-      color: #3b2415;
-    }
+<style>
+* {
+  box-sizing: border-box;
+}
 
-    header {
-      background: #4b2e1e;
-      color: white;
-      text-align: center;
-      padding: 25px 15px;
-    }
+body {
+  margin: 0;
+  font-family: Arial, Tahoma, sans-serif;
+  background: #f5f1e8;
+  color: #3b2415;
+}
 
-    header h1 {
-      margin: 0;
-      font-size: 32px;
-    }
+header {
+  background: #4b2e1e;
+  color: white;
+  text-align: center;
+  padding: 30px 15px;
+}
 
-    header p {
-      margin: 10px 0 0;
-      font-size: 17px;
-    }
+header h1 {
+  margin: 0;
+  font-size: 32px;
+}
 
-    .hero {
-      text-align: center;
-      padding: 25px 15px;
-    }
+header p {
+  margin-top: 10px;
+  font-size: 17px;
+}
 
-    .hero h2 {
-      margin-bottom: 8px;
-      font-size: 26px;
-    }
+.hero {
+  text-align: center;
+  padding: 25px 15px;
+}
 
-    .hero p {
-      color: #6b513e;
-    }
+.hero h2 {
+  font-size: 26px;
+}
 
-    .products {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 20px;
-      padding: 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  max-width: 1100px;
+  margin: auto;
+}
 
-    .product {
-      background: white;
-      border-radius: 14px;
-      overflow: hidden;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.12);
-      text-align: center;
-      padding-bottom: 20px;
-    }
+.product {
+  background: white;
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.12);
+  text-align: center;
+  padding-bottom: 20px;
+}
 
-    .product img {
-      width: 100%;
-      height: 240px;
-      object-fit: cover;
-      background: #ddd;
-    }
+.product img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
 
-    .product h3 {
-      margin: 15px 10px 8px;
-      font-size: 21px;
-    }
+.product h3 {
+  margin: 15px 10px 8px;
+  font-size: 21px;
+}
 
-    .price {
-      font-size: 19px;
-      font-weight: bold;
-      color: #8a4b20;
-      margin-bottom: 15px;
-    }
+.price {
+  font-size: 19px;
+  font-weight: bold;
+  color: #8a4b20;
+  margin-bottom: 15px;
+}
 
-    .order-btn {
-      display: inline-block;
-      background: #25D366;
-      color: white;
-      text-decoration: none;
-      padding: 11px 22px;
-      border-radius: 25px;
-      font-weight: bold;
-      cursor: pointer;
-      border: none;
-      font-size: 16px;
-    }
+.order-btn {
+  display: inline-block;
+  background: #1877F2;
+  color: white;
+  text-decoration: none;
+  padding: 11px 22px;
+  border-radius: 25px;
+  font-weight: bold;
+}
 
-    .order-btn:hover {
-      opacity: 0.9;
-    }
+.about {
+  max-width: 900px;
+  margin: 30px auto;
+  padding: 25px;
+  text-align: center;
+  background: #fffaf2;
+  border-radius: 15px;
+}
 
-    .about {
-      max-width: 900px;
-      margin: 30px auto;
-      padding: 25px;
-      text-align: center;
-      background: #fffaf2;
-      border-radius: 15px;
-    }
+footer {
+  background: #4b2e1e;
+  color: white;
+  text-align: center;
+  padding: 20px;
+  margin-top: 30px;
+}
 
-    footer {
-      background: #4b2e1e;
-      color: white;
-      text-align: center;
-      padding: 20px;
-      margin-top: 30px;
-    }
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 27px;
+  }
 
-    @media (max-width: 600px) {
-      header h1 {
-        font-size: 27px;
-      }
+  .products {
+    padding: 12px;
+  }
+}
+</style>
+</head>
 
-      .products {
-        padding: 12px;
-      }
-    }
-  </
+<body>
+
+<header>
+  <h1>حرفي الجلد</h1>
+  <p>محافظ جلدية يدوية • صناعة تقليدية • جودة وحرفية</p>
+</header>
+
+<section class="hero">
+  <h2>محافظ جلدية يدوية</h2>
+  <p>اختر المحفظة التي تعجبك وتواصل معنا عبر فيسبوك</p>
+</section>
+
+<section class="products">
+
+  <!-- المحفظة 1 -->
+  <div class="product">
+    <img src="https://placehold.co/600x600?text=محفظة+1" alt="محفظة جلدية">
+    <h3>محفظة جلدية رقم 1</h3>
+    <div class="price">2500 دج</div>
+
+    <a class="order-btn"
+       href="https://www.facebook.com/profile.php?id=61594824441976"
+       target="_blank">
+       اطلب عبر فيسبوك
+    </a>
+  </div>
+
+
+  <!-- المحفظة 2 -->
+  <div class="product">
+    <img src="https://placehold.co/600x600?text=محفظة+2" alt="محفظة جلدية">
+    <h3>محفظة جلدية رقم 2</h3>
+    <div class="price">3000 دج</div>
+
+    <a class="order-btn"
+       href="https://www.facebook.com/profile.php?id=61594824441976"
+       target="_blank">
+       اطلب عبر فيسبوك
+    </a>
+  </div>
+
+
+  <!-- المحفظة 3 -->
+  <div class="product">
+    <img src="https://placehold.co/600x600?text=محفظة+3" alt="محفظة جلدية">
+    <h3>محفظة جلدية رقم 3</h3>
+    <div class="price">3500 دج</div>
+
+    <a class="order-btn"
+       href="https://www.facebook.com/profile.php?id=61594824441976"
+       target="_blank">
+       اطلب عبر فيسبوك
+    </a>
+  </div>
+
+</section>
+
+<section class="about">
+  <h2>عن حرفي الجلد</h2>
+
+  <p>
+    محافظ جلدية مصنوعة يدويًا بعناية،
+    تجمع بين الطابع التقليدي والأناقة والمتانة.
+  </p>
+</section>
+
+<footer>
+  <p>© 2026 حرفي الجلد - جميع الحقوق محفوظة</p>
+</footer>
+
+</body>
+</html>
